@@ -6,7 +6,7 @@ module.exports = {
   entry: {
     app: './src/index.js',
   },
-  devtool: 'inline-source-map',
+  // devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -18,9 +18,9 @@ module.exports = {
             // cacheDirectory: true,
             // presets: ['es2015',{ "modules": false }],
             // plugins: ['transform-runtime']
-            presets: [
-              ["env"],
-            ],
+            // presets: [
+            //   ["env"],
+            // ],
             // // "plugins": ["transform-runtime"],
             // plugins: ["transform-decorators-legacy","transform-runtime"]
           }
@@ -29,9 +29,9 @@ module.exports = {
     ]
   },
   plugins: [
-      new webpack.optimize.UglifyJsPlugin({
-          compress: { warnings: false }
-      }),
+      // new webpack.optimize.UglifyJsPlugin({
+      //     compress: { warnings: false }
+      // }),
   ],
   output: {
     filename: 'index.js',

@@ -1,4 +1,4 @@
-export default function getStrLen(str) {
+module.exports= function (str) {
     if (typeof str !== 'string'){
         throw new Error('the param should be string!')
     }
