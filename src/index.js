@@ -1,4 +1,7 @@
 export default function getStrLen(str) {
+    if (typeof str !== 'string'){
+        throw new Error('the param should be string!')
+    }
     let realLength = 0;
     let len = str.length;
     let charCode = -1;
