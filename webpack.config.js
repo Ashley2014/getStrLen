@@ -29,11 +29,15 @@ module.exports = {
     ]
   },
   plugins: [
+      new webpack.optimize.UglifyJsPlugin({
+          compress: { warnings: false }
+      }),
   ],
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd',
     publicPath: "/",
-  }
+  },
+
 };
