@@ -13,25 +13,25 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader:'babel-loader',
-          options: {
-            // cacheDirectory: true,
-            // presets: ['es2015',{ "modules": false }],
-            // plugins: ['transform-runtime']
-            // presets: [
-            //   ["env"],
-            // ],
-            // // "plugins": ["transform-runtime"],
-            // plugins: ["transform-decorators-legacy","transform-runtime"]
+              loader:'babel-loader',
+              options: {
+                  // cacheDirectory: true,
+                  // presets: ['es2015',{ "modules": false }],
+                  // plugins: ['transform-runtime']
+                  presets: [
+                      ["env",{ "modules": false }],
+                  ],
+                  // // "plugins": ["transform-runtime"],
+                  // plugins: ["transform-decorators-legacy","transform-runtime"]
+              }
           }
-        }
       }
     ]
   },
   plugins: [
-      // new webpack.optimize.UglifyJsPlugin({
-      //     compress: { warnings: false }
-      // }),
+      new webpack.optimize.UglifyJsPlugin({
+          compress: { warnings: false }
+      }),
   ],
   output: {
     filename: 'index.js',
